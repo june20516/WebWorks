@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="kwonBoard(search_ver)">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="kwonBoard(search_ver)"/>
+        <property name="java-output-path" value="/kwonBoard(search_ver)/build/classes"/>
+    </wb-module>
+</project-modules>

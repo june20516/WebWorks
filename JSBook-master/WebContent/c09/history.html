@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - 제9장 APIs - 히스토리 API</title>
+    <link rel="stylesheet" href="css/c09.css" />
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <header><h1>THE MAKER BUS</h1></header>
+    <h2>Prizes</h2>
+    <div class="two-thirds">
+      <nav>
+		<label id="history" class="current">첫번째</label>
+		<label id="history2" >두번째</label>
+		<label id="history3" >세번째</label>
+      </nav>
+      <section id="content" class="current" >
+        <div class="container">
+          <p>First prize is the DJI Phantom - a small, all-in-one quadcopter designed for aerial photography enthusiasts. It comes fully configured and ready to fly. Both compact and stylish, the highly integrated design means that it's easy to carry wherever you go, ready at a moment's notice.</p>
+        </div>
+      </section>
+      <section id="content2" hidden="" >
+        <div class="container">
+          <p>Second prize is the Arduino Robot - the first official Arduino on wheels! The robot has two processors, one on each of its two boards. The Motor Board controls the motors, and the Control Board reads sensors and decides how to operate. Each of the boards is a full Arduino board programmable using the Arduino IDE.</p>
+        </div>
+      </section>
+      <section id="content3" hidden="" >
+        <div class="container">
+          <p>Third prize is a collection of books for the motivated maker. Includes best-selling titles <i>Makers</i> by Cory Doctorow, <i>The Maker Movement Manifesto: Rules for Innovation in the New World of Crafters, Hackers, and Tinkerers</i> by Mark Hatch, and <i>Invent To Learn: Making, Tinkering, and Engineering in the Classroom</i> by Sylvia Libow Martinez.</p>
+        </div>
+      </section>
+    </div>
+    <div class="third img"><img src="img/toys1.jpg" alt="Circuit boards" />
+    <img src="img/toys1.jpg" alt="Circuit boards" hidden=""/>
+    <img src="img/toys2.jpg" alt="Circuit boards" hidden=""/></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/history.js"></script>
+  </body>
+</html>

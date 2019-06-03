@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Form tag 연습</title>
+</head>
+<body>
+	<form action="Test2.html" id="" method="get">
+		Form tag입니다. <br>
+		여기에서 입력되는 값들을 action페이지로 전달하는 기능입니다.<br>
+		submit type의 input 태그는 form태그와 기능적으로 결합되어있어, submit을 넣어두면 
+		추가적인 설정이 필요없습니다.<br> 
+		<br>
+		get방식은 form 안의 정보들을 get하여 이동할 url에 들려보냅니다.
+		<br>
+		<br>
+		<h4>element의 식별 attribute</h4>
+		스크립트에서는 id<br>
+		css에서 여러개를 묶어서 사용하려면 class<br>
+		서버측에서 가져와서 써야 하는 경우 name(하나의 form에서는 하나의 name만 있어야함)<br>
+		<input type="text" value="text input box" class="" id="" name=""><br>
+		<input type="button" value="button">
+		<input type="submit" value="get방식"><br>
+	</form>
+	
+	<form action="Test2.html" id="" method="post">
+		Form tag2입니다. <br>
+		post방식은 아무런 처리 없이 지정한 url로 이동만 시켜줍니다. 
+		<button type="submit">post방식</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+body{background:#f1f1f1;}
+#signup-box{width:400px;margin:0 auto;padding:10px;box-sizing:border-box;}
+#signup-box h1{margin-bottom:20px;font-size:30px;font-weight:700;text-align:center;color:#003263;}
+#signup-box p{margin-bottom:10px;}
+.inputBox{width: 100%;height: 50px;line-height: 50px;padding: 10px 14px 10px 14px;border: solid 1px #dadada;background: #fff;font-size: 15px;box-sizing: border-box;}
+.inlineWrap::after{content:'';display:block;clear:both;}
+.inlineWrap input{float:left;width:30%;margin-right:5%;}
+.inlineWrap input:last-child{margin-right:0;}
+.inlineWrap select{float:left;width:30%;height:50px;line-height:50px;margin-right:5%;border: solid 1px #dadada;padding:10px 14px 10px 14px;box-sizing:border-box;}
+.blockWrap select{width:100%;height:50px;line-height:50px;border: solid 1px #dadada;padding:10px 14px 10px 14px;box-sizing:border-box;}
+.btn{display:inline-block;width:47%;height: 50px;margin-right:4.5%;color: #fff;background: #003263;text-align:center;text-decoration:none;line-height: 28px;font-weight: 400;margin-top: 10px;border: 1px solid #14428d;padding: 0 15px;}
+.btn.cancel{margin-right:0;background:#666;border:1px solid #666;}

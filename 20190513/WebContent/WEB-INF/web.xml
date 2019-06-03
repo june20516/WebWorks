@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>20190513</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Hello</display-name>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>test.Hello</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HelloCall</servlet-name>
+    <jsp-file>/inputForm2.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloCall</servlet-name>
+    <url-pattern>/hcall</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>mappingTestServlet</display-name>
+    <servlet-name>mappingTestServlet</servlet-name>
+    <servlet-class>a.b.c.mappingTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mappingTestServlet</servlet-name>
+    <url-pattern>/mts.psj</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("a").on("click",function(){
+		$("a").attr("href", "");
+		$(this).attr("href", "#");
+		switch($(this).text()) {
+		case("1"):
+			$("#pic").attr("src", "image/Bimages.png");
+		break;
+		case("2"):
+			$("#pic").attr("src", "image/iosDevRoadMap.png");
+		break;
+		case("3"):
+			$("#pic").attr("src", "image/pooreen.png");
+		break;
+		}
+		    });
+		
+	})
+ 
+ </script>
+</head>
+
+<body>
+
+	<img src="image/Bimages.jpg" id="" alt="" width="100%" height="50%" />
+	<div id="menu">
+		<a href="#">1</a> 
+		<a href="">2</a>
+		<a href="">3</a>
+	</div>
+	<img id="pic" alt="phto" src="image/Bimages.png" width="100%" height="50%">
+</body>
+</html>
