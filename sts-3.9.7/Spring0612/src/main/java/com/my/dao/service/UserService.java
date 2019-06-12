@@ -1,0 +1,11 @@
+package com.my.dao.service;
+
+import java.util.List;
+
+import com.my.dto.User;
+
+public interface UserService {
+	List<User> allUser();
+	
+	User infoUser(String id, String pw);
+}

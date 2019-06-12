@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="helBe" class="hello.HelloBeanImpl" />
+
+	<bean id="bar" class="x.y.Bar" />
+	<bean id="baz" class="x.y.Baz" />
+	<bean id="foo" class="x.y.Foo">
+		<constructor-arg>
+			<ref bean="bar" />
+		</constructor-arg>
+		<constructor-arg ref="baz" />
+	</bean>
+
+	<bean id="bar2" class="p40.Bar2" />
+	<bean id="baz2" class="p40.Baz2" />
+	<bean id="foo2" class="p40.Foo2">
+		<constructor-arg ref="bar2" />
+		<property name="baz2">
+			<ref bean="baz2" />
+		</property>
+	</bean>
+	
+	<bean id="calculator" class="p46.CalculatorServiceImpl">
+		<property name="valueList">
+			<list>
+				<value type="java.lang.Integer">10</value>
+				<value type="java.lang.Integer">20</value>
+				<value type="java.lang.Integer">30</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="greeting" class="p55.byname.GreetingServiceImpl" autowire="byName" />
+	<bean id="outputter" class="p55.byname.OutputServiceImplConsole" />
+	
+	<bean id="greeting2" class="p55.bytype.GreetingServiceImpl2" autowire="byType" />
+	<bean id="consoleout2" class="p55.bytype.OutputServiceImplConsole2" />
+
+	<bean id="greeting3" class="p55.byconstructor.GreetingServiceImpl3" autowire="constructor" />
+	<bean id="consoleout3" class="p55.byconstructor.OutputServiceImplConsole3" />
+	
+	<bean id="greeting4" class="p55.byautodetect.GreetingServiceImpl4" autowire="autodetect" />
+	<bean id="outputter4" class="p55.byautodetect.OutputServiceImplConsole4" />
+</beans>
