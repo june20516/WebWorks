@@ -19,6 +19,7 @@
 		<servlet-name>appServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
+		<!--  DispatcherServlet resource -->
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
 		</init-param>
@@ -29,5 +30,21 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	<filter>
+		<filter-name>TextEncoder</filter-name>
+		<filter-class>com.bit.helloweb.filters.TextEncodingFilter</filter-class>
+		<init-param>
+			<param-name>filterConfig</param-name>
+			<param-value>TextEncodingLog.txt</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+	<filter-name>TextEncoder</filter-name>
+	<url-pattern>*.do</url-pattern>
+	<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	 
+	
 
 </web-app>

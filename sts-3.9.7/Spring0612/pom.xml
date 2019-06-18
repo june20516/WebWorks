@@ -30,11 +30,8 @@
 	<repositories>
 
 		<repository>
-
 			<id>Spring Plugins</id>
-
 			<url>http://repo.spring.io/plugins-release/</url>
-
 		</repository>
 
 	</repositories>

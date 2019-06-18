@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.bit.helloweb.dao.mapper.UserMapper">
+	
+	<select id="findUser" resultType="User">
+	select *
+	from person
+	where id=#{id} and pw=#{pw}
+	</select>
+
+	<sql id="all">
+		select id, pw, name, email from person
+	</sql>	
+	<select id="findUserList" resultType="User">
+		<include refid="all"></include>
+	</select>
+	</mapper>
+<!--	
+	<select id="findUser" resultType="User">
+	select *
+	from person
+	where id=#{id} and pw=#{pw}
+	</select>
+	
+	<select id="findUser2" resultType="User">
+	select email
+	from person
+	where id=#{id} and pw=#{pw}
+	</select>
+	
+	<insert id="insertUser" parameterType="User">
+		INSERT INTO person (id,pw,name,email) VALUES (#{id}, #{pw}, #{name}, #{email})
+	</insert>
+	
+	<delete id="deleteUser" parameterType="User" >
+		delete from person where id=#{id}
+	</delete>
+	
+	<update id="updateUser" parameterType="User" > 
+	UPDATE person
+	SET pw=#{pw},
+		name=#{name},
+		email=#{email}
+	WHERE id=#{id}
+	</update>
+	
+	
+</mapper> -->
