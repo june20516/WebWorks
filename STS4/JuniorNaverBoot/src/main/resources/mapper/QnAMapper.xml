@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.bit.juniver.model.dao.QnAMapper">
+	<select id='getList' resultType="com.bit.juniver.model.vo.QnABean">
+		select qno, member_id, qtitle, qdate from qna order by qno desc
+	</select>
+	
+	<select id="qnaView" resultType="com.bit.juniver.model.vo.QnABean">
+		select qno, member_id, qtitle, qcontents, email, qdate from qna where qno=#{qNo}
+	</select>
+	
+	<select id="qnaWrite" resultType="com.bit.juniver.model.vo.QnABean">
+		insert into qna(qno, member_id, qtitle, qcontents, email ) values(Q_A_SEQ.nextval, #{member_id}, #{qTitle}, #{qContents},#{email})
+	</select>
+	
+	<select id="qnaUpdate" resultType="com.bit.juniver.model.vo.QnABean">
+		update qna set qtitle=#{qTitle}, qcontents=#{qContents}, email=#{email} where qno=#{qNo}
+	</select>
+	
+	<select id="qndDelete" resultType="com.bit.juniver.model.vo.QnABean">
+		delete from qna where qno=#{qNo}
+	</select>
+</mapper>

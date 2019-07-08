@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script type="text/javascript">
+$(function () {
+	$("#deleteBtn").click(function() {
+		$("#infoForm").attr("action","/delete");
+		$("#infoForm").submit();
+	})
+	$("#oneBtn").click(function() {
+		$("#infoForm").attr("action","/one");
+		$("#infoForm").submit();
+	})
+	
+	
+})
+
+</script>
+</head>
+<body>
+
+in
+de
+x
+
+<form id="infoForm" action="/add2" method="post">
+
+<label for="email">email : </label> <input type="text" name="email" ><br>
+<label for="password">password : </label> <input type="password" name="password" ><br>
+<input type="submit" value="췤췤"> <br><br>
+아이디 : <input type="text" name="id">
+<input type="button" id="deleteBtn" value="삭제">
+<input type="button" id="oneBtn" value="찾기">
+</form>
+<a href="/test"> test </a>
+
+
+</body>
+</html>

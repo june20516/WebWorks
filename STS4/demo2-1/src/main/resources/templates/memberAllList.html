@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>회원목록</h2>
+	<p th:text="${members}"></p>
+	<p th:text="${param.llc}"></p>
+	<p th:text="${param.lc}"></p>
+	<br>
+	<select id="localeBox" >
+		<option value="ko_KR" class="localeOption" th:selected="${locale}==ko_KR">한국</option>
+		<option value="en_US" class="localeOption" th:selected="${locale}==en_US">미국</option>
+		<option value="ja_JP" class="localeOption" th:selected="${locale}==ja_JP">일본</option>
+	</select>
+	<table border="1">
+		<tr>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>나이</th>
+		</tr>
+
+
+
+		<tr th:each="member : ${members}">
+			<td th:text="${member.id}">id</td>
+			<td th:text="${member.name}">name</td>
+			<td th:text="${member.age>90}?#{trueMsg}:#{falseMsg}">age</td>
+		</tr>
+	</table>
+	
+<script type="text/javascript">
+
+$(document).ready(function(){
+	 $("#localeBox").change(function(){
+		location.href = "/all/" + $(this).val();
+	});
+});
+
+</script>
+</body>
+</html>

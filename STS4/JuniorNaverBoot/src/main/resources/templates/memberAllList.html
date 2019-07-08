@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>회원목록이라캄</h2>
+	<p th:text="${members}"></p>
+	
+	<table border="1">
+	<tr>
+	<th>ID</th>
+	<th>이름</th>
+	<th>나이</th>
+	<th>특성</th>
+	</tr>
+	<tr th:each="member, stat : ${members}" th:object="${member}">
+	<td th:text="*{id}">id</td>
+	<td th:text="*{name}">name</td>
+	<td th:text="*{age}">age</td>
+	<td th:text="*{age>80}? #{trueMsg} : #{falseMsg}"> </td>
+	</tr>
+	</table>
+</body>
+</html>

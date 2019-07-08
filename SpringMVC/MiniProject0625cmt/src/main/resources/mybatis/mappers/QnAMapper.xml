@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bit.juniver.model.dao.ContentMapper">
+
+	<select id="getQnAList" resultType="com.bit.juniver.model.dto.QnABean">
+		select qNo,email,qTitle from q_a;
+	</select>
+
+	<select id="getQnA" parameterType="int"
+		resultType="com.bit.juniver.model.dto.QnABean">
+		select * from q_a
+		where qno=#{qNo}
+	</select>
+
+	<insert id="writeQnA" parameterType="com.bit.juniver.model.dto.QnABean">
+		insert into q_a (qno,email,qtitle,qcontents,qattachments)
+		 values (Q_A_SEQ.NEXTVAL,#{email},#{qTitle},#{qContents},#{qAttachments})
+	</insert>
+	
+	<update id="correctQnA" parameterType="com.bit.juniver.model.dto.QnABean">
+		update q_a set email=#{email},qtitle=#{qTitle},qcontents=#{qContents},qattachment#{qAttachments}
+		 where qno=#{qNo}
+	</update>
+	
+	<delete id="deleteQnA" parameterType="int">
+		delete from q_a where qno=#{qNo}
+	</delete>
+</mapper>
+

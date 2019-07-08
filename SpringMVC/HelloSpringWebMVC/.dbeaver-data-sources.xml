@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="oracle_thin-16b6949c175-2d1c399f9b5d0e2c" provider="oracle" driver="oracle_thin" name="Oracle - xe" save-password="true" read-only="false">
+		<connection host="192.168.0.51" port="1521" server="" database="xe" url="jdbc:oracle:thin:@192.168.0.51:1521:xe" user="bit1" password="EQ0ScSGi" type="dev">
+			<provider-property name="@dbeaver-always-use-dba-views@" value="false"/>
+			<provider-property name="@dbeaver-sid-service@" value="SID"/>
+			<provider-property name="@dbeaver-use-rule-hint@" value="false"/>
+			<provider-property name="@dbeaver-use-meta-optimizer@" value="false"/>
+			<provider-property name="@dbeaver-connection-type@" value="BASIC"/>
+			<provider-property name="@dbeaver-check-schema-content@" value="false"/>
+			<provider-property name="@dbeaver-meta-use-sys-schema@" value="false"/>
+			<provider-property name="@dbeaver-always-show-dba@" value="false"/>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>

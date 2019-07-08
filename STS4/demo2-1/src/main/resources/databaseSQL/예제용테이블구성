@@ -1,0 +1,17 @@
+ 멤버 				member
+아이디 문자열		id	varchar(10)
+이름 문자열			name varchar(20)
+나이 숫자			age number(3)
+
+create table member (id varchar(10) primary key not null, name varchar(20), age int);
+
+insert into member values ('수진2019', '이수진', 24);
+insert into member values ('홍씨2019', '홍한얼', 22);
+insert into member values ('김진광1004', '김진광', 29);
+
+
+
+
+
+
+

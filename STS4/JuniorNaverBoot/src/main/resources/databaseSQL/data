@@ -1,0 +1,5 @@
+insert into member(id, name, age)
+			values('kim123','김진광',10);
+			
+insert into member(id, name, age)
+			values('park123','박경민',10);
