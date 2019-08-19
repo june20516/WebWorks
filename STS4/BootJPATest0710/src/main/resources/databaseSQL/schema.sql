@@ -1,0 +1,38 @@
+DROP TABLE member2 IF EXISTS;
+DROP TABLE phone IF EXISTS;
+DROP SEQUENCE member2_seq IF EXISTS;
+DROP SEQUENCE phone_seq IF EXISTS;
+
+
+
+CREATE TABLE member2(
+	seq INT(10) PRIMARY KEY NOT NULL,
+	name VARCHAR(50) NULL DEFAULT NULL
+
+);
+
+CREATE TABLE phone(
+	seq INT(10) PRIMARY KEY NOT NULL,
+	member_id INT(10) NULL DEFAULT NULL,
+	no VARCHAR(20) NULL DEFAULT NULL
+
+);
+
+CREATE SEQUENCE member2_seq 
+		MINVALUE 1
+		MAXVALUE 99999
+		START WITH 1
+		INCREMENT BY 1;
+		
+CREATE SEQUENCE phone_seq 
+		MINVALUE 1
+		MAXVALUE 99999
+		START WITH 1
+		INCREMENT BY 1;
+		
+		
+		
+insert into member2 values(member2_seq.NEXTVAL, 'KIM');
+
+
+insert into phone values(member2_seq.NEXTVAL,1,'010-9874-6789');

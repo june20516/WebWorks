@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>멤버추가</h1><br>
+	<form action="/add2">
+		이메일 : <input type="email" name="email"><br> 
+		암호 : <input type="password" name="password"><br> 
+		<input type="submit">
+	</form>
+	
+	<h1>이메일로 멤버 검색</h1> <br>
+	<form action="/email">
+		이메일 : <input type="email" name="email"><br> 
+		<input type="submit">
+	</form>
+	
+	<h1>이메일이 같으면</h1> <br>
+	<form action="/emailQuery">
+		이메일 : <input type="email" name="email"><br> 
+		<input type="submit">
+	</form>
+	
+	<h1>이메일과 암호가 동일한 멤버 검색</h1> <br>
+	<form action="/search">
+		이메일 : <input type="email" name="email"><br>
+		암호 : <input type="password" name="password"><br> 
+		<input type="submit">
+	</form>
+
+
+</body>
+</html>
